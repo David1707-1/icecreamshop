@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceCreamMan – Handcrafted Ice Cream & Sundaes</title>
+    <meta name="description"
+        content="Experience handcrafted ice cream, signature sundaes, and unique flavors at IceCreamMan. Order online or visit your nearest branch.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <marquee behavior="scroll" direction="left" scrollamount="4">
+            🍦 Free delivery on orders over $25 &nbsp;•&nbsp; Order via: GLOVO, BOLT FOOD, UBER EATS &nbsp;•&nbsp; ☎
+            +233 55 555 5555 &nbsp;•&nbsp; 🎉 New Flavor: Mango Tango Sorbet!
+        </marquee>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🍦</span>
+                <span class="logo-text">IceCreamMan</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#flavors">Flavors</a></li>
+                <li><a href="#app">App</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <button class="order-btn" onclick="alert('Order feature coming soon!')">Order Now</button>
+            <button class="burger" id="burger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1600&q=85&auto=format&fit=crop"
+            alt="Colourful ice cream scoops" id="hero-img" loading="eager">
+        <div class="hero-content">
+            <p class="hero-tag">Est. 2010 · Handcrafted Daily</p>
+            <h1 class="hero-title">Life Is Sweeter<br>With Every <span class="hero-accent">Scoop.</span></h1>
+            <p class="hero-sub">Premium artisan ice cream made with the finest ingredients. Explore 60+ flavors.</p>
+            <div class="hero-cta">
+                <a href="#menu" class="btn btn-hero-red">Explore Menu</a>
+                <a href="#flavors" class="btn btn-hero-outline">Our Flavors</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- ── FEATURES STRIP ── -->
+    <section class="features-strip">
+        <div class="feature-item">
+            <i class="fas fa-leaf"></i>
+            <span>Natural Ingredients</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-truck"></i>
+            <span>Fast Delivery</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-award"></i>
+            <span>Award Winning</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-sync-alt"></i>
+            <span>New Flavors Weekly</span>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ── MENU SECTION ── -->
+        <section class="menu-section" id="menu">
+            <div class="section-header">
+                <p class="section-eyebrow">What We Offer</p>
+                <h2 class="section-title">Our Menu.</h2>
+                <p class="section-subtitle">Browse our full range of handcrafted ice creams, cones, cups and sundaes —
+                    made fresh every single day.</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="menu-tabs" id="menu-tabs">
+                <button class="menu-tab active" data-cat="all">All Items</button>
+                <!-- <button class="menu-tab" data-cat="classic">Classic Scoops</button>
+                <button class="menu-tab" data-cat="sundae">Sundaes</button>
+                <button class="menu-tab" data-cat="cone">Cones</button>
+                <button class="menu-tab" data-cat="sorbet">Sorbet</button> -->
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-items-grid" id="menu-grid">
+
+                <!-- Classic Scoops -->
+                <div class="menu-item-card" data-cat="classic">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=1000&auto=format&fit=crop"
+                            alt="Vanilla Bean Double Scoop">
+                        <span class="mic-tag">Best Seller</span>
+                    </div>
+                    <div class="mic-body">
+                        <h4>Vanilla Bean Double Scoop</h4>
+                        <p>Two generous scoops of pure Madagascar vanilla bean ice cream.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 30.00</span><button class="mic-btn"
+                                onclick="alert('Added Vanilla Bean to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-cat="classic">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=85&auto=format&fit=crop"
+                            alt="Triple Chocolate Fudge">
+                        <span class="mic-tag new">Fan Favourite</span>
+                    </div>
+                    <div class="mic-body">
+                        <h4>Triple Chocolate Fudge</h4>
+                        <p>Dark, milk and white chocolate swirled together in one divine scoop.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 35.00</span><button class="mic-btn"
+                                onclick="alert('Added Triple Chocolate to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-cat="classic">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=500&q=85&auto=format&fit=crop"
+                            alt="Strawberry Fields">
+                    </div>
+                    <div class="mic-body">
+                        <h4>Strawberry Fields</h4>
+                        <p>Real crushed strawberries folded into a light, creamy base. Summer in a cup.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 35.00</span><button class="mic-btn"
+                                onclick="alert('Added Strawberry to cart!')"><i class="fas fa-plus"></i></button></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-cat="classic">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=85&auto=format&fit=crop"
+                            alt="Pistachio Dream">
+                        <span class="mic-tag new">New</span>
+                    </div>
+                    <div class="mic-body">
+                        <h4>Pistachio Dream</h4>
+                        <p>Roasted Iranian pistachios blended into a velvety, nutty ice cream.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 40.00</span><button class="mic-btn"
+                                onclick="alert('Added Pistachio to cart!')"><i class="fas fa-plus"></i></button></div>
+                    </div>
+                </div>
+
+                <!-- Sundaes -->
+                <div class="menu-item-card" data-cat="sundae">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1633933358116-a27b902fad35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGljZSUyMGNyZWFtfGVufDB8fDB8fHww"
+                            alt="Classic Hot Fudge Sundae">
+                        <span class="mic-tag">Best Seller</span>
+                    </div>
+                    <div class="mic-body">
+                        <h4>Classic Hot Fudge Sundae</h4>
+                        <p>Vanilla ice cream, hot fudge, whipped cream, nuts & a cherry on top.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 45.00</span><button class="mic-btn"
+                                onclick="alert('Added Hot Fudge Sundae to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-cat="sundae">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500&q=85&auto=format&fit=crop"
+                            alt="Rainbow Sprinkle Sundae">
+                    </div>
+                    <div class="mic-body">
+                        <h4>Rainbow Sprinkle Sundae</h4>
+                        <p>Three colourful scoops loaded with rainbow sprinkles and sweet strawberry sauce.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 35.00</span><button class="mic-btn"
+                                onclick="alert('Added Rainbow Sundae to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cones -->
+                <div class="menu-item-card" data-cat="cone">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1576615278693-f8e095e37e01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhZmZsZXxlbnwwfHwwfHx8MA%3D%3D=crop"
+                            alt="Waffle Cone Stack">
+                        <span class="mic-tag">Popular</span>
+                    </div>
+                    <div class="mic-body">
+                        <h4>Waffle Cone Stack</h4>
+                        <p>Freshly baked waffle cone loaded with two scoops of your choice.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 40.00</span><button class="mic-btn"
+                                onclick="alert('Added Waffle Cone to cart!')"><i class="fas fa-plus"></i></button></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-cat="cone">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1562513872-634b8fae6dbe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2FmZmxlfGVufDB8fDB8fHww=crop"
+                            alt="Soft Serve Swirl Cone">
+                    </div>
+                    <div class="mic-body">
+                        <h4>Soft Serve Swirl Cone</h4>
+                        <p>Silky soft serve twisted into a perfect curl atop a classic sugar cone.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 20.00/span><button class="mic-btn"
+                                    onclick="alert('Added Soft Serve to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sorbet -->
+                <div class="menu-item-card" data-cat="sorbet">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1592247620763-4d87bbf7d303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbmdvJTIwc29yYmV0fGVufDB8fDB8fHww=crop"
+                            alt="Mango Tango Sorbet">
+                        <span class="mic-tag new">New</span>
+                    </div>
+                    <div class="mic-body">
+                        <h4>Mango Tango Sorbet</h4>
+                        <p>Tangy, refreshing Alphonso mango sorbet — dairy free &amp; absolutely delicious.</p>
+                        <div class="mic-footer"><span class="mic-price">GHC 30.00</span><button class="mic-btn"
+                                onclick="alert('Added Mango Sorbet to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-cat="sorbet">
+                    <div class="mic-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?w=500&q=85&auto=format&fit=crop"
+                            alt="Passion Fruit Sorbet">
+                    </div>
+                    <div class="mic-body">
+                        <h4>Passion Fruit Sorbet</h4>
+                        <p>Tropical, zingy passion fruit sorbet — the perfect palate cleanser.</p>
+                        <div class="mic-footer"><span class="mic-price">$5.99</span><button class="mic-btn"
+                                onclick="alert('Added Passion Fruit to cart!')"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /menu-items-grid -->
+        </section>
+
+        <!-- ── SIGNATURE SCOOPS ── -->
+        <section class="sig-section" id="signature">
+            <div class="section-header">
+                <p class="section-eyebrow">Chef's Specials</p>
+                <h2 class="section-title">Our Signature Scoops.</h2>
+                <p class="section-subtitle">Hand-crafted by our master ice cream chefs using rare ingredients sourced
+                    from around the world.</p>
+            </div>
+            <div class="sig-scoops-grid">
+
+                <div class="sig-scoop-card">
+                    <div class="ssc-img-ring" style="--ring:#f59e0b">
+                        <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?w=300&q=85&auto=format&fit=crop&crop=entropy"
+                            alt="Mango Habanero">
+                    </div>
+                    <h4>Mango Habanero</h4>
+                    <p>Sweet & fiery mango infused with a hint of habanero pepper.</p>
+                    <span class="ssc-price">GHC 49.00</span>
+                    <button class="btn btn-red" style="padding:8px 20px;font-size:0.8rem"
+                        onclick="alert('Mango Habanero added!')">Order</button>
+                </div>
+
+                <div class="sig-scoop-card featured-scoop">
+                    <div class="ssc-img-ring" style="--ring:#e31837">
+                        <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=300&q=85&auto=format&fit=crop&crop=entropy"
+                            alt="Berry Cheesecake">
+                    </div>
+                    <span class="ssc-badge">⭐ Signature</span>
+                    <h4>Berry Cheesecake</h4>
+                    <p>Creamy cheesecake base swirled with wild mixed berry compote.</p>
+                    <span class="ssc-price">GHC 40.00</span>
+                    <button class="btn btn-red" style="padding:8px 20px;font-size:0.8rem"
+                        onclick="alert('Berry Cheesecake added!')">Order</button>
+                </div>
+
+                <div class="sig-scoop-card">
+                    <div class="ssc-img-ring" style="--ring:#8b5cf6">
+                        <img src="https://images.unsplash.com/photo-1515037028865-0a2a82603f7c?w=300&q=85&auto=format&fit=crop&crop=entropy"
+                            alt="Lavender Honey">
+                    </div>
+                    <h4>Lavender Honey</h4>
+                    <p>Delicate French lavender blended with local wildflower honey.</p>
+                    <span class="ssc-price">GHC 55.00</span>
+                    <button class="btn btn-red" style="padding:8px 20px;font-size:0.8rem"
+                        onclick="alert('Lavender Honey added!')">Order</button>
+                </div>
+
+                <div class="sig-scoop-card">
+                    <div class="ssc-img-ring" style="--ring:#10b981">
+                        <img src="https://images.unsplash.com/photo-1582785513054-8d1bf9d69c1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hdGNoYXxlbnwwfHwwfHx8MA%3D%3D=crop&crop=entropy"
+                            alt="Matcha White Choc">
+                    </div>
+                    <h4>Matcha White Choc</h4>
+                    <p>Japanese ceremonial grade matcha with creamy white chocolate chips.</p>
+                    <span class="ssc-price">GHC 60.00</span>
+                    <button class="btn btn-red" style="padding:8px 20px;font-size:0.8rem"
+                        onclick="alert('Matcha added!')">Order</button>
+                </div>
+
+                <div class="sig-scoop-card featured-scoop">
+                    <div class="ssc-img-ring" style="--ring:#ec4899">
+                        <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=300&q=85&auto=format&fit=crop&crop=entropy"
+                            alt="Strawberry Basil">
+                    </div>
+                    <span class="ssc-badge">🔥 Hot Pick</span>
+                    <h4>Strawberry Basil</h4>
+                    <p>Roasted strawberries paired with fresh garden basil — surprisingly divine.</p>
+                    <span class="ssc-price">GHC 30.00</span>
+                    <button class="btn btn-red" style="padding:8px 20px;font-size:0.8rem"
+                        onclick="alert('Strawberry Basil added!')">Order</button>
+                </div>
+
+                <div class="sig-scoop-card">
+                    <div class="ssc-img-ring" style="--ring:#3b82f6">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=300&q=85&auto=format&fit=crop&crop=entropy"
+                            alt="Blue Velvet">
+                    </div>
+                    <h4>Blue Velvet</h4>
+                    <p>Butterfly pea flower ice cream with vanilla swirls — strikingly beautiful.</p>
+                    <span class="ssc-price">GHC 10.00</span>
+                    <button class="btn btn-red" style="padding:8px 20px;font-size:0.8rem"
+                        onclick="alert('Blue Velvet added!')">Order</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── FLAVORS GRID ── -->
+        <section class="flavors-section" id="flavors">
+            <div class="section-header">
+                <p class="section-eyebrow">60+ Varieties</p>
+                <h2 class="section-title">Popular Flavors.</h2>
+                <p class="section-subtitle">Handpicked favorites loved by our customers every single day.</p>
+            </div>
+            <div class="flavors-grid">
+                <div class="flavor-card" onclick="alert('Vanilla Bean — GHC 10.00')">
+                    <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=1000&auto=format&fit=crop"
+                        alt="Vanilla Bean">
+                    <div class="flavor-info"><span class="flavor-name">Vanilla Bean</span><span class="flavor-price">GHC
+                            10.00</span></div>
+                    <div class="flavor-overlay"><button class="btn btn-white">Add to Order</button></div>
+                </div>
+                <div class="flavor-card" onclick="alert('Strawberry Fields — GHC 50.00')">
+                    <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400&q=85&auto=format&fit=crop"
+                        alt="Strawberry">
+                    <div class="flavor-info"><span class="flavor-name">Strawberry Fields</span><span
+                            class="flavor-price">GHC 50.00</span></div>
+                    <div class="flavor-overlay"><button class="btn btn-white">Add to Order</button></div>
+                </div>
+                <div class="flavor-card" onclick="alert('Double Chocolate — GHC 50.00')">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=85&auto=format&fit=crop"
+                        alt="Chocolate">
+                    <div class="flavor-info"><span class="flavor-name">Double Chocolate</span><span
+                            class="flavor-price">GHC 50.00</span></div>
+                    <div class="flavor-overlay"><button class="btn btn-white">Add to Order</button></div>
+                </div>
+                <div class="flavor-card" onclick="alert('Mango Sorbet — GHC 30.00')">
+                    <img src="https://images.unsplash.com/photo-1592247620763-4d87bbf7d303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbmdvJTIwc29yYmV0fGVufDB8fDB8fHwwt=crop"
+                        alt="Mango Sorbet">
+                    <div class="flavor-info"><span class="flavor-name">Mango Sorbet</span><span class="flavor-price">GHC
+                            30.00</span></div>
+                    <div class="flavor-overlay"><button class="btn btn-white">Add to Order</button></div>
+                </div>
+                <div class="flavor-card" onclick="alert('Pistachio Dream — GHC 50.00')">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=85&auto=format&fit=crop"
+                        alt="Pistachio">
+                    <div class="flavor-info"><span class="flavor-name">Pistachio Dream</span><span
+                            class="flavor-price">GHC 50.00</span></div>
+                    <div class="flavor-overlay"><button class="btn btn-white">Add to Order</button></div>
+                </div>
+                <div class="flavor-card" onclick="alert('Rainbow Swirl — GHC 30.00')">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&q=85&auto=format&fit=crop"
+                        alt="Rainbow Swirl">
+                    <div class="flavor-info"><span class="flavor-name">Rainbow Swirl</span><span
+                            class="flavor-price">GHC 30.00</span></div>
+                    <div class="flavor-overlay"><button class="btn btn-white">Add to Order</button></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── APP SECTION ── -->
+        <section class="app-section" id="app">
+            <div class="app-deco app-deco-1"></div>
+            <div class="app-deco app-deco-2"></div>
+            <div class="app-left">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&q=85&auto=format&fit=crop"
+                    alt="Order via our mobile app" class="phone-mockup">
+            </div>
+            <div class="app-right">
+                <p class="section-eyebrow" style="color:rgba(255,255,255,0.7)">Download Now</p>
+                <h2>Order Anywhere.<br>Anytime. 🚀</h2>
+                <p class="app-desc">Track your order live, collect loyalty points and get exclusive app-only deals. Join
+                    200,000+ happy customers!</p>
+                <div class="store-buttons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                        alt="App Store" class="store-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Google Play" class="store-btn">
+                </div>
+                <!-- <p class="sms-label">Or get a link via SMS</p>
+                <div class="app-input-row">
+                    <input type="tel" id="sms-input" placeholder="📱 Your phone number">
+                    <button class="btn btn-white" onclick="handleSMS()">GET LINK</button>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- ── BRANCHES ── -->
+        <section class="branches-section" id="branches">
+            <div class="section-header">
+                <p class="section-eyebrow">Find Us</p>
+                <h2 class="section-title">Closest Branches.</h2>
+                <p class="section-subtitle">Locate your nearest ice cream paradise.</p>
+            </div>
+            <div class="branch-filters">
+                <select id="city-select">
+                    <option value="Downtown">📍 Accra</option>
+                    <option value="Uptown">📍 Kumasi</option>
+                    <option value="Westside">📍 Tema</option>
+                </select>
+                <select id="area-select">
+                    <option value="Main Street">Main Street</option>
+                    <option value="Mall Avenue">Mall Avenue</option>
+                    <option value="Beach Blvd">Beach Blvd</option>
+                </select>
+            </div>
+            <div class="branch-content">
+                <div class="branch-list">
+                    <div class="branch-card active-branch" id="branch-card-1">
+                        <div class="bc-icon">🏪</div>
+                        <div>
+                            <p class="bc-name" id="bc-name-1">IceCreamMan – Accra</p>
+                            <p class="bc-time"><i class="far fa-clock"></i> 8:00 AM – 10:00 PM</p>
+                            <span class="bc-status open">● Open Now</span>
+                        </div>
+                    </div>
+                    <div class="branch-card" id="branch-card-2">
+                        <div class="bc-icon">🏪</div>
+                        <div>
+                            <p class="bc-name">IceCreamMan – Kumasi</p>
+                            <p class="bc-time"><i class="far fa-clock"></i> 9:00 AM – 11:00 PM</p>
+                            <span class="bc-status open">● Open Now</span>
+                        </div>
+                    </div>
+                    <div class="branch-card" id="branch-card-3">
+                        <div class="bc-icon">🏪</div>
+                        <div>
+                            <p class="bc-name">IceCreamMan – Tema</p>
+                            <p class="bc-time"><i class="far fa-clock"></i> 10:00 AM – 9:00 PM</p>
+                            <span class="bc-status closed">● Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="branch-map">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=900&q=85&auto=format&fit=crop"
+                        alt="Map showing branch locations">
+                    <div class="map-pin">📍 You Are Here</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── REVIEWS ── -->
+        <section class="reviews-section" id="reviews">
+            <div class="section-header">
+                <p class="section-eyebrow">Customer Love</p>
+                <h2 class="section-title">What They're Saying.</h2>
+                <div class="stars-overview">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span>4.9</span> <small>/ 5.0 based on 3,200+ reviews</small>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card card-red">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"The best ice cream I've ever tasted! The flavors are so intense, creamy and
+                        fresh. I visit every weekend now."</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Sarah Jenkins">
+                        <div class="r-auth-info"><span class="r-name">Sarah Jenkins</span><span class="r-date">2 days
+                                ago</span></div>
+                    </div>
+                </div>
+                <div class="review-card card-green">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"Always a pleasure. Their signature sundaes are MASSIVE and worth every single
+                        penny. My family's favourite!"</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Mawusi lotsu">
+                        <div class="r-auth-info"><span class="r-name">Mawusi lotsu</span><span class="r-date">1 week
+                                ago</span></div>
+                    </div>
+                </div>
+                <div class="review-card card-yellow">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"My kids go absolutely wild here! Colorful, fun and the staff are so friendly.
+                        10/10 recommend to everyone."</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Enyonam Parku">
+                        <div class="r-auth-info"><span class="r-name">Enyonam Parku</span><span class="r-date">3 weeks
+                                ago</span></div>
+                    </div>
+                </div>
+                <div class="review-card card-grey">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"Delivery was incredibly fast through the app and the ice cream arrived perfectly
+                        frozen. Impressive service!"</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Kwame Boakye">
+                        <div class="r-auth-info"><span class="r-name">Kwame Boakye</span><span class="r-date">1 month
+                                ago</span></div>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="review-card card-green">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"Wow, the Mango Habanero is unlike anything I've ever tried. Sweet, spicy and
+                        absolutely addictive. Love it!"</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Dzifa Parku">
+                        <div class="r-auth-info"><span class="r-name">Dzifa Parku</span><span class="r-date">4 days
+                                ago</span></div>
+                    </div>
+                </div>
+                <div class="review-card card-grey">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"The lavender honey scoop is a work of art. I can't believe how beautifully
+                        balanced the flavors are. Exquisite!"</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="James Owusu">
+                        <div class="r-auth-info"><span class="r-name">James Owusu</span><span class="r-date">5 days
+                                ago</span></div>
+                    </div>
+                </div>
+                <div class="review-card card-red">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"We ordered 6 tubs for a birthday party and everyone was blown away. Best ice
+                        cream in the entire city, hands down!"</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Abena Pokuaa">
+                        <div class="r-auth-info"><span class="r-name">Abena Pokuaa</span><span class="r-date">2 weeks
+                                ago</span></div>
+                    </div>
+                </div>
+                <div class="review-card card-yellow">
+                    <i class="fas fa-quote-left review-quote-icon"></i>
+                    <p class="r-text">"The waffle cones are freshly baked on site — you can smell them from outside!
+                        I've been coming here every week for 2 years."</p>
+                    <div class="r-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="r-author">
+                        <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=120&q=80&auto=format&fit=crop&crop=face"
+                            alt="Mike Ansah">
+                        <div class="r-auth-info"><span class="r-name">Mike Ansah</span><span class="r-date">3 days
+                                ago</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination-dots">
+                <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span
+                    class="dot"></span><span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- ── GALLERY ── -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-header" style="padding: 60px 20px 30px">
+                <p class="section-eyebrow">Our Sweet Moments</p>
+                <h2 class="section-title">Photo Gallery.</h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.6)">Real photos from our kitchens, cones and
+                    happy customers.</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1563805042-7684c8e9e533?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c8e9e533?w=500&q=80&auto=format&fit=crop"
+                        alt="Classic Cones">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Classic Cones</span></div>
+                </div> -->
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500&q=80&auto=format&fit=crop"
+                        alt="Rainbow Scoops">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Rainbow Scoops</span></div>
+                </div>
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&q=80&auto=format&fit=crop"
+                        alt="Melting Scoop">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Melting Scoop</span></div>
+                </div>
+                <!-- <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1570197781417-0a82375893d1?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1570197781417-0a82375893d1?w=500&q=80&auto=format&fit=crop"
+                        alt="Waffle Cone">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Waffle Cone</span></div>
+                </div> -->
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=500&q=80&auto=format&fit=crop"
+                        alt="Hot Fudge Sundae">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Hot Fudge Sundae</span></div>
+                </div>
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80&auto=format&fit=crop"
+                        alt="Chocolate Drizzle">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Chocolate Drizzle</span></div>
+                </div>
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&q=80&auto=format&fit=crop"
+                        alt="Pistachio Scoop">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Pistachio Scoop</span></div>
+                </div>
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=500&q=80&auto=format&fit=crop"
+                        alt="Strawberry Sundae">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Strawberry Sundae</span></div>
+                </div>
+                <!-- <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1567206563114-c179ce41f489?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1567206563114-c179ce41f489?w=500&q=80&auto=format&fit=crop"
+                        alt="Soft Serve Swirl">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Soft Serve Swirl</span></div>
+                </div> -->
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=500&q=80&auto=format&fit=crop"
+                        alt="Berry Crunch">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Berry Crunch</span></div>
+                </div>
+                <!-- <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1590080875897-1e76a1c424f7?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1590080875897-1e76a1c424f7?w=500&q=80&auto=format&fit=crop"
+                        alt="Mango Sorbet">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Mango Sorbet</span></div>
+                </div> -->
+                <div class="gallery-item"
+                    data-src="https://images.unsplash.com/photo-1557142046-c704a3adf364?w=1200&q=90&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?w=500&q=80&auto=format&fit=crop"
+                        alt="Passion Fruit Scoop">
+                    <div class="gallery-hover"><i class="fas fa-expand"></i><span>Passion Fruit</span></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lb-close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav prev" id="lb-prev"><i class="fas fa-chevron-left"></i></button>
+        <img src="" alt="Gallery Lightbox" id="lb-img">
+        <button class="lightbox-nav next" id="lb-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#e31837" />
+            </svg>
+        </div>
+        <div class="footer-top">
+            <div class="ft-col">
+                <div class="footer-logo">🍦 IceCreamMan</div>
+                <p class="footer-tagline">Making every day sweeter, one scoop at a time.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="ft-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Franchising</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> hi@icecreamman.com</p>
+                <p><i class="fas fa-phone"></i> +1 800 123 4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Sweet Street, Dessert City</p>
+                <p><i class="far fa-clock"></i> Open Daily 8AM – 11PM</p>
+            </div>
+            <div class="ft-col">
+                <h4>Get the App</h4>
+                <div class="footer-stores">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                        alt="App Store" class="store-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Google Play" class="store-btn">
+                </div>
+                <h4 style="margin-top:20px">Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="your@email.com">
+                    <button class="btn btn-white" onclick="handleNewsletter(this)">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IceCreamMan. All Rights Reserved.</p>
+            <p>Made with ❤️ &amp; 🍦</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
